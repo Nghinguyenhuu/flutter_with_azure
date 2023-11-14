@@ -27,11 +27,6 @@ jobs:
     - name: Build web
       run: flutter build web --release
 
-  deploy:
-    need: build
-    runs-on: windows-latest
-
-    steps:
     - name: Az CLI login
       uses: azure/login@v1
       with:
