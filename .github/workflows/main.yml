@@ -24,20 +24,6 @@ jobs:
 #    - name: build runner
 #      run: flutter pub run build_runner build --delete-conflicting-outputs
 
-      # Download the Azure CLI MSI installer
-    - name: Download Azure CLI MSI installer
-      uses: actions/download-artifact@v2
-      with:
-        name: azure-cli.msi
-
-      # Install the Azure CLI
-    - name: Install Azure CLI
-      run: msiexec /i azure-cli.msi /quiet
-
-      # Authenticate with Azure
-    - name: Authenticate with Azure
-      run: az login
-
     - name: Az CLI login
       uses: azure/login@v1
       with:
