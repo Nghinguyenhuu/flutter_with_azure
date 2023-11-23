@@ -35,5 +35,5 @@ jobs:
       with:
         app-name: 'DeveraFitness'
         slot-name: 'production'
-        package: 'azure_demo/build/web'
+        package: azure_demo/build/web
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_ccad52081eee40179254c52e68e2a489 }}
