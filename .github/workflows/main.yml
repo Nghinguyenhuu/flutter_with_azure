@@ -33,7 +33,7 @@ jobs:
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
-        app-name: 'Flutter demo'
+        app-name: 'DeveraFitness'
         slot-name: 'production'
         package: build/web
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_ccad52081eee40179254c52e68e2a489 }}
