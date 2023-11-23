@@ -38,5 +38,4 @@ jobs:
       with:
         app-name: 'Flutter demo'
         slot-name: 'production'
-        package: build/web
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_ccad52081eee40179254c52e68e2a489 }}
