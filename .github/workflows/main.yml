@@ -21,6 +21,12 @@ jobs:
     - name: Install dependencies
       run: flutter pub get
 
+    - name: Create deployment package
+      run: |
+        cd build/web
+        zip -r deploy.zip .
+        cd ..
+
 #    - name: build runner
 #      run: flutter pub run build_runner build --delete-conflicting-outputs
 
@@ -35,5 +41,5 @@ jobs:
       with:
         app-name: 'DeveraFitness'
         slot-name: 'production'
-        package: 'build/web/**'
+        package: './build/web/deploy.zip'
         publish-profile: ${{ secrets.AzureAppService_PublishProfile_ccad52081eee40179254c52e68e2a489 }}
